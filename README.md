@@ -53,3 +53,31 @@ This stage ensures the dataset is consistent, complete, and suitable for explora
 
 *Dataset cleaned, imputed, and ready for feature encoding & target mapping in the next step.*
 - [x] Saved cleaned dataset as CLEANED_IMPUTED_BRFSS24.csv
+---
+#  Step 3 — Mapping Categorical Variables to Meaningful Labels
+
+**Notebook:** `Step3_Mapping_variables_For_EDA.ipynb`
+
+In this step, categorical variables in the cleaned BRFSS dataset were converted into **human-readable labels**.  
+The original numeric codes (1, 2, 3, 4..) were mapped to descriptive text values such as *“Yes”*, *“No”*, *“Male”*, *“Female”*, *“Excellent”*, *“Poor”*, etc.
+
+This step improves clarity during EDA and makes graphs, summaries, and relationships easier to interpret.
+
+
+> Tasks Performed:
+
++ Created label-mapped versions of categorical columns using `_LABEL` suffix  
+  Example:
+  `SMOKE100' to SMOKE100_LABEL as {1: 'Yes', 2: 'No'}`
+
++ Mapped categorical codes for all selected features into descriptive text labels
+
++ Ensured original numeric columns remained untouched for modeling purposes
+
++ Prepared dataset for cleaner, more readable EDA visualizations
+
++ Verified label mappings to avoid missing or incorrectly assigned categories
+
+*Dataset now includes readable `_LABEL` columns, improving interpretation and visualization in the upcoming EDA step.*
+
+- [x] Saved including both numerical and ordinal Categorial data as CLEANED_LABELED_BRFSS2024.csv
