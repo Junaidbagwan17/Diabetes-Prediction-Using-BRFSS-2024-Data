@@ -139,3 +139,45 @@ Statistically validated evidence supporting the patterns seen in visualizations.
 A solid analytical foundation that guides feature selection and model building in the next step.
 
 - [x] The dataset is now well-understood, and the key predictors influencing diabetes have been statistically confirmed — ready for Step 5: Data Preprocessing for Modeling.
+
+----
+# Step 5 — Data Preprocessing for Modeling
+
+Notebook: `Step5_Data_Preprocessing_for_Model.ipynb`
+
+In this step, the cleaned BRFSS dataset was transformed into a fully model-ready format.
+Numeric and categorical features were standardized, encoded, and optimized to ensure that machine learning algorithms receive consistent, meaningful inputs.
+
+The goal of this step was to prepare high-quality, standardized features while preventing data leakage and preserving model integrity.
+
+> Tasks Performed:
+
++ Identified and selected all numeric columns
++ Used select_dtypes() to gather int64 and float64 variables.
++ Removed the target variable DIABETE4 from this list to avoid leakage.
++ Converted BMI to real BMI values
++ Transformed _BMI5 by dividing by 100 to convert BRFSS’s stored BMI (×100) into actual BMI.
++ Mapped age category _AGEG5YR into meaningful numeric midpoints
++ Replaced ordinal category codes with midpoint age values for more realistic modeling.
++ Applied One-Hot Encoding for race
++ Created binary indicator variables using pd.get_dummies() for _IMPRACE.
++ Checked for missing values & verified distributions
++ Ensured clean, valid numeric ranges before scaling.
+- Standardized all numeric features using StandardScaler
+- Scaled features to mean = 0 and standard deviation = 1 to improve model stability and training performance.
+- (Note: Scaling should be done after train-test split to avoid leakage. souece - GOOGLE) 
+Ensured that label-mapped columns were excluded from modeling
+Only numeric, model-safe columns were retained for training and evaluation.
+
+> Outcome
+The dataset is now fully preprocessed, containing:
+- Well-scaled numeric features
+
+- Properly encoded categorical variables
+
+- Corrected age and BMI representations
+
+- Clean, consistent inputs ready for machine learning algorithms
+
+- [x] Generated a complete model-ready dataset for Step 6 — Model Building & Training
+
