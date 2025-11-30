@@ -81,3 +81,61 @@ This step improves clarity during EDA and makes graphs, summaries, and relations
 *Dataset now includes readable `_LABEL` columns, improving interpretation and visualization in the upcoming EDA step.*
 
 - [x] Saved including both numerical and ordinal Categorial data as CLEANED_LABELED_BRFSS2024.csv
+---
+# Step 4 — EDA and Hypothesis Testing
+
+Notebook: `Step4_EDA_and_HypothesisTesting.ipynb`
+
+In this step, the cleaned BRFSS 2024 dataset was explored using Univariate and Bivariate EDA to understand the overall structure, distributions, and relationships among the variables.
+Additionally, statistical hypothesis tests (Chi-square tests) were performed to validate the observed relationships with diabetes status.
+
+The goal of this step is to uncover meaningful patterns, detect skewness/outliers, and statistically confirm which features show significant differences between diabetic and non-diabetic individuals.
+
+>  Tasks Performed
+>> Univariate Analysis
+
++ Visualized the distribution of key variables such as Age, BMI, Physical Health Days, Life Satisfaction, Income, and Education.
+
++ Identified skewness, outliers, and imbalanced categories.
+
++ Summarized patterns relevant for later feature engineering and modeling.
+
+>> Bivariate Analysis
+
+Explored how major predictors relate to diabetes status using bar plots and proportion charts.
+Compared categories such as:
+
++ General Health vs Diabetes
+
++ Income Level vs Diabetes
+
++ Exercise Status vs Diabetes
+
++ Life Satisfaction vs Diabetes
+
+>> Hypothesis Testing (Chi-Square Tests)
+
+Performed Chi-square tests to validate associations between categorical predictors and diabetes.
+
+Significant relationships were found for:
+
++ General Health vs Diabetes
+
++ Income Group vs Diabetes
+
++ Exercise Status vs Diabetes
+
++ Education Level vs Diabetes
+
+*Results confirmed that several health and demographic factors differ meaningfully between diabetic and non-diabetic individuals.*
+
+>> Hyoothesis Outcomes Cheking using BRFSS Data
+
+This step produced:
+
+Clear distribution plots for understanding data behavior.
+Relationship insights showing which features are strongly linked to diabetes.
+Statistically validated evidence supporting the patterns seen in visualizations.
+A solid analytical foundation that guides feature selection and model building in the next step.
+
+- [x] The dataset is now well-understood, and the key predictors influencing diabetes have been statistically confirmed — ready for Step 5: Data Preprocessing for Modeling.
